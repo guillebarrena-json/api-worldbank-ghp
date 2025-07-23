@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visor API Banco Mundial</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Visor de Indicadores del Banco Mundial</h1>
+  </header>
+
+  <main>
+    <form id="controls">
+      <label for="country">País:</label>
+      <select id="country">
+        <!-- Se llenará dinámicamente -->
+      </select>
+
+      <label for="indicator">Variable:</label>
+      <select id="indicator">
+        <option value="NY.GDP.PCAP.CD">PIB per cápita</option>
+        <option value="SP.POP.TOTL">Población total</option>
+        <option value="SL.UEM.TOTL.ZS">Tasa de desempleo</option>
+        <!-- Puedes añadir más opciones aquí -->
+      </select>
+
+      <button type="submit">Cargar</button>
+    </form>
+
+    <section class="chart-container">
+      <canvas id="timeSeriesChart"></canvas>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
